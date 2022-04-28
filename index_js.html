@@ -1,0 +1,231 @@
+</html>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Graficzny edytor HTML</title>
+</head>
+<body>
+<script  src="https://code.jquery.com/jquery-3.5.1.min.js" integrity= "sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<div id="window">
+<input class="button" type="submit" id="html" value="<HTML>" onclick="struktura()">
+<input class="button" type="submit" id="br" value="<br>" onclick="br()">
+<input class="button" type="submit" id="p" value="<p>" onclick="p()">
+<input class="button" type="submit" id="h1" value="<h1>" onclick="h1()">
+<input class="button" type="submit" id="h2" value="<h2>" onclick="h2()">
+<input class="button" type="submit" id="h3" value="<h3>" onclick="h3()">
+<input class="button" type="submit" id="h4" value="<h4>" onclick="h4()">
+<input class="button" type="submit" id="h5" value="<h5>" onclick="h5()">
+<input class="button" type="submit" id="h6" value="<h6>" onclick="h6()">
+<input class="button" type="submit" id="section" value="<section>" onclick="section()">
+<input class="button" type="submit" id="article" value="<article>" onclick="article()">
+<input class="button" type="submit" id="aside" value="<aside>" onclick="aside()">
+<input class="button" type="submit" id="header" value="<header>" onclick="header()">
+<input class="button" type="submit" id="footer" value="<footer>" onclick="footer()">   
+<input class="button" type="submit" id="details" value="<details>" onclick="details()">   
+<input class="button" type="submit" id="nav" value="<nav>" onclick="nav()"> 
+<input class="button" type="submit" id="main" value="<main>" onclick="main()"> 
+<input class="button" type="submit" id="link" value="<link>" onclick="link()"> 
+<input class="button" type="submit" id="form" value="<form>" onclick="formularz()"> 
+<input class="button" type="submit" id="table" value="<table>" onclick="table()"> 
+</div>
+<br>
+<div id="okno">
+<textarea id="text"></textarea>
+<textarea id="text2"></textarea> 
+
+</div>
+
+<div class="float">
+    <button id="download1" onclick="clearTextArea()"><div id="how"><img src="delete.png" id="icon"></div></button>
+</div>
+
+<div class="float">
+    <button id="download"><div id="how"><img src="icon.png" id="icon"></div></button>
+</div>
+<script>
+    function struktura(){
+        var curPos = document.getElementById("text").selectionStart;
+        console.log(curPos);
+        let x = $("#text").val();
+        let text_to_insert = "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Document</title>\n</head>\n<body>\n\n</body>\n</html>";
+        $("#text").val(
+            x.slice(0, curPos) + text_to_insert + x.slice(curPos));
+    }
+    function p(){
+        var curPos = document.getElementById("text").selectionStart;
+        console.log(curPos);
+        let x = $("#text").val();
+        let text_to_insert = "<p></p>";
+        $("#text").val(
+            x.slice(0, curPos) + text_to_insert + x.slice(curPos));
+    }
+    function h1(){
+        var curPos = document.getElementById("text").selectionStart;
+        console.log(curPos);
+        let x = $("#text").val();
+        let text_to_insert = "<h1></h1>";
+        $("#text").val(
+            x.slice(0, curPos) + text_to_insert + x.slice(curPos));
+    }
+    function h2(){
+        var curPos = document.getElementById("text").selectionStart;
+        console.log(curPos);
+        let x = $("#text").val();
+        let text_to_insert = "<h2></h2>";
+        $("#text").val(
+            x.slice(0, curPos) + text_to_insert + x.slice(curPos));
+    }
+    function h3(){
+        var curPos = document.getElementById("text").selectionStart;
+        console.log(curPos);
+        let x = $("#text").val();
+        let text_to_insert = "<h3></h3>";
+        $("#text").val(
+            x.slice(0, curPos) + text_to_insert + x.slice(curPos));
+    }
+    function h4(){
+        var curPos = document.getElementById("text").selectionStart;
+        console.log(curPos);
+        let x = $("#text").val();
+        let text_to_insert = "<h4></h4>";
+        $("#text").val(
+            x.slice(0, curPos) + text_to_insert + x.slice(curPos));
+    }
+    function h5(){
+        var curPos = document.getElementById("text").selectionStart;
+        console.log(curPos);
+        let x = $("#text").val();
+        let text_to_insert = "<h5></h5>";
+        $("#text").val(
+            x.slice(0, curPos) + text_to_insert + x.slice(curPos));
+    }
+    function h6(){
+        var curPos = document.getElementById("text").selectionStart;
+        console.log(curPos);
+        let x = $("#text").val();
+        let text_to_insert = "<h6></h6>";
+        $("#text").val(
+            x.slice(0, curPos) + text_to_insert + x.slice(curPos));
+    }
+    function section(){
+        var curPos = document.getElementById("text").selectionStart;
+        console.log(curPos);
+        let x = $("#text").val();
+        let text_to_insert = "<section></section>";
+        $("#text").val(
+            x.slice(0, curPos) + text_to_insert + x.slice(curPos));
+    }
+    function article(){
+        var curPos = document.getElementById("text").selectionStart;
+        console.log(curPos);
+        let x = $("#text").val();
+        let text_to_insert = "<article></article>";
+        $("#text").val(
+            x.slice(0, curPos) + text_to_insert + x.slice(curPos));
+    }
+    function aside(){
+        var curPos = document.getElementById("text").selectionStart;
+        console.log(curPos);
+        let x = $("#text").val();
+        let text_to_insert = "<aside></aside>";
+        $("#text").val(
+            x.slice(0, curPos) + text_to_insert + x.slice(curPos));
+    }
+    function header(){
+        var curPos = document.getElementById("text").selectionStart;
+        console.log(curPos);
+        let x = $("#text").val();
+        let text_to_insert = "<header></header>";
+        $("#text").val(
+            x.slice(0, curPos) + text_to_insert + x.slice(curPos));
+    }
+    function footer(){
+        var curPos = document.getElementById("text").selectionStart;
+        console.log(curPos);
+        let x = $("#text").val();
+        let text_to_insert = "<footer></footer>";
+        $("#text").val(
+            x.slice(0, curPos) + text_to_insert + x.slice(curPos));
+    }
+    function nav(){
+        var curPos = document.getElementById("text").selectionStart;
+        console.log(curPos);
+        let x = $("#text").val();
+        let text_to_insert = "<nav></nav>";
+        $("#text").val(
+            x.slice(0, curPos) + text_to_insert + x.slice(curPos));
+    }
+    function main(){
+        var curPos = document.getElementById("text").selectionStart;
+        console.log(curPos);
+        let x = $("#text").val();
+        let text_to_insert = "<main></main>";
+        $("#text").val(
+            x.slice(0, curPos) + text_to_insert + x.slice(curPos));
+    }
+    function br(){
+        var curPos = document.getElementById("text").selectionStart;
+        console.log(curPos);
+        let x = $("#text").val();
+        let text_to_insert = "<br>";
+        $("#text").val(
+            x.slice(0, curPos) + text_to_insert + x.slice(curPos));
+    }
+    function details(){
+        var curPos = document.getElementById("text").selectionStart;
+        console.log(curPos);
+        let x = $("#text").val();
+        let text_to_insert = "<details></details>";
+        $("#text").val(
+            x.slice(0, curPos) + text_to_insert + x.slice(curPos));
+    }
+    function table(){
+        var curPos = document.getElementById("text2").selectionStart;
+        console.log(curPos);
+        let x = $("#text2").val();
+        let text_to_insert = "<table>\n \t<tr><!-- Wiersz tabeli -->\n\t\t<td> </td><!-- Komorka tabeli -->\n\t\t<td> </td>\n\t</tr>\n\t<tr>\n\t\t<td> </td>\n\t\t<td> </td>\n\t</tr>\n</table>";
+        $("#text2").val(
+            x.slice(0, curPos) + text_to_insert + x.slice(curPos));
+    }
+    function formularz(){
+        var curPos = document.getElementById("text2").selectionStart;
+        console.log(curPos);
+        let x = $("#text2").val();
+        let text_to_insert = '<form method="" action="">\n\n</form>';
+        $("#text2").val(
+            x.slice(0, curPos) + text_to_insert + x.slice(curPos));
+    }
+    function link(){
+        var curPos = document.getElementById("text").selectionStart;
+        console.log(curPos);
+        let x = $("#text").val();
+        let text_to_insert = '<link rel="stylesheet" href="">';
+        $("#text").val(
+            x.slice(0, curPos) + text_to_insert + x.slice(curPos));
+    }
+
+    function save_file() {
+  var textToSave = document.getElementById('text').value;
+  var hiddenElement = document.createElement('a');
+
+  hiddenElement.href = 'data:attachment/text,' + encodeURI(textToSave);
+  hiddenElement.target = '_blank';
+  hiddenElement.download = 'index.html';
+  hiddenElement.click();
+}
+
+    document.getElementById('download').addEventListener('click', save_file);
+
+    function clearTextArea(){
+        document.getElementById("text").value = " ";
+        document.getElementById("text2").value = " ";
+    }
+
+
+</script>
+</body>
+</html>
