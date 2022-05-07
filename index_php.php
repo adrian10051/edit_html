@@ -49,6 +49,51 @@
     <button id="download"><div id="how"><img src="icon.png" id="icon"></div></button>
 </div>
 <script>
+    function insert(arg){
+        var curPos = document.getElementById("text").selectionStart;
+        console.log(curPos);
+        let x = $("#text").val();
+        let text_to_insert = arg;
+        $("#text").val(
+            x.slice(0, curPos) + text_to_insert + x.slice(curPos));
+    }
+    
+    function struktura(){
+        var curPos = document.getElementById("text").selectionStart;
+        console.log(curPos);
+        let x = $("#text").val();
+        let text_to_insert = "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Document</title>\n</head>\n<body>\n\n</body>\n</html>";
+        $("#text").val(
+            x.slice(0, curPos) + text_to_insert + x.slice(curPos));
+    }
+
+    function table(){
+        var curPos = document.getElementById("text2").selectionStart;
+        console.log(curPos);
+        let x = $("#text2").val();
+        let text_to_insert = "<table>\n \t<tr><!-- Wiersz tabeli -->\n\t\t<td> </td><!-- Komorka tabeli -->\n\t\t<td> </td>\n\t</tr>\n\t<tr>\n\t\t<td> </td>\n\t\t<td> </td>\n\t</tr>\n</table>";
+        $("#text2").val(
+            x.slice(0, curPos) + text_to_insert + x.slice(curPos));
+    }
+
+    function formularz(){
+        var curPos = document.getElementById("text2").selectionStart;
+        console.log(curPos);
+        let x = $("#text2").val();
+        let text_to_insert = '<form method="" action="">\n\n</form>';
+        $("#text2").val(
+            x.slice(0, curPos) + text_to_insert + x.slice(curPos));
+    }
+    
+    function link(){
+        var curPos = document.getElementById("text").selectionStart;
+        console.log(curPos);
+        let x = $("#text").val();
+        let text_to_insert = '<link rel="stylesheet" href="">';
+        $("#text").val(
+            x.slice(0, curPos) + text_to_insert + x.slice(curPos));
+    }
+
 
     function save_file() {
         var textToSave = document.getElementById('text').value;
